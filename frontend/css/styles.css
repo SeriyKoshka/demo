@@ -1,0 +1,197 @@
+/* Общие стили для тёмной темы */
+body {
+    background-color: #1a1a1a; /* Тёмный фон */
+    color: #e0e0e0; /* Светлый текст */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер для контента */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #2a2a2a; /* Тёмный фон контейнера */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень */
+}
+
+/* Заголовки */
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Поля ввода и выпадающие списки */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #333333; /* Тёмный фон поля */
+    color: #e0e0e0; /* Светлый текст */
+    border: 1px solid #555555;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #007bff; /* Синий контур при фокусе */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}
+
+select.form-control {
+    padding-right: 30px; /* Сохраняем отступ для текста */
+}
+
+/* Кнопки */
+.btn-primary {
+    background-color: #007bff; /* Сплошной синий цвет */
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Более тёмный синий при наведении */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Сплошной серый цвет */
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Более тёмный серый при наведении */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Сплошной красный цвет */
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Более тёмный красный при наведении */
+}
+
+/* Таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #444444;
+    text-align: left;
+}
+
+th {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+tr:nth-child(even) {
+    background-color: #2f2f2f; /* Чередование строк */
+}
+
+tr:hover {
+    background-color: #383838; /* Подсветка при наведении */
+}
+
+/* Сообщения об ошибках и успехе */
+.alert {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Формы */
+form .row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: flex-end; /* Выравнивание элементов формы по нижнему краю */
+}
+
+form .col-md-4, form .col-md-2 {
+    flex: 1;
+    min-width: 150px; /* Уменьшенная минимальная ширина для лучшего отображения */
+}
+
+/* Контейнер для кнопок внизу страниц */
+.button-group {
+    text-align: center; /* Центрирование кнопок */
+    margin-top: 20px;
+}
+
+/* Конкретные стили для страниц */
+.form-group {
+    width: 100%;
+    max-width: 400px; /* Ограничение максимальной ширины */
+    margin: 0 auto 15px; /* Центрирование полей */
+}
+
+/* Для кнопки "Добавить" в manage_users.php */
+.add-user-btn {
+    margin-top: 15px; /* Компенсация смещения */
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    form .row {
+        flex-direction: column;
+    }
+    .btn-primary, .btn-secondary, .btn-danger {
+        width: 100%;
+        text-align: center;
+    }
+    .form-group {
+        max-width: 100%;
+    }
+}
